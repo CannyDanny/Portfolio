@@ -1,0 +1,129 @@
+@font-face {
+  font-family: Neou-Thin;
+  src: url('font/Neou-Thin.ttf');
+}
+@font-face {
+  font-family: Neou-Bold;
+  src: url('font/Neou-Bold.ttf');
+}
+
+/* Default Styling */
+html {
+  height: 100%;
+}
+body {
+  margin:0;
+  padding: 0;
+  height: 100%;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+}
+
+/* Menu Section */
+.navbar-brand {
+  font-family: Neou-Thin;
+}
+.nav-item {
+  font-family: Neou-Bold;
+
+}
+
+/* First Section */
+.first-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url('../img/front-image.jpg');
+  background-size: cover;
+}
+.first-page-title h1 {
+  font-size: 7em;
+  font-family: Neou-Thin;
+  font-weight: 100;
+}
+.first-page-title h2 {
+  font-size: 5em;
+  font-family: Neou-Bold;
+}
+
+/* About Section */
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-image: url('../img/about-image.jpg');
+  background-size: cover;
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.about-section-left {
+  font-family: Neou-Thin;
+  font-size: 2.5em;
+}
+.about-section-right {
+  font-family: Neou-Bold;
+}
+
+/* Project Section */
+.project-section{
+  height: auto;
+}
+
+.project-section p {
+  font-family: Neou-Bold;
+  text-align: center;
+}
+
+.project-section h1 {
+  font-family: Neou-Thin;
+  text-align: center;
+  font-size: 4em;
+}
+
+.project-section i {
+  font-size: 2.5em;
+  position: relative;
+  top: 8px;
+  right: 20px;
+}
+
+.project-section-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.project-image {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: auto;
+  height: 500px;
+
+}
+
+.project-one {
+  background-image: url('../img/projekt-image1.png');
+}
+.project-two {
+  background-image: url('../img/projekt-image1.png');
+}
+.project-three {
+  background-image: url('../img/projekt-image1.png');
+}
+
+.project-section-github {
+  display: flex;
+  justify-content: center;
+}
