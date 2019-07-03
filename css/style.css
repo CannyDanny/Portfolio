@@ -2,18 +2,26 @@
   font-family: Neou-Thin;
   src: url('font/Neou-Thin.ttf');
 }
+
 @font-face {
   font-family: Neou-Bold;
   src: url('font/Neou-Bold.ttf');
 }
 
 /* Default Styling */
-html {
-  height: 100%;
+:root {
+  --container-bg-color: #333;
+  --left-bg-color: rgba(223, 39, 39, 0.7);
+  --right-bg-color: rgba(43, 43, 43, 0.8);
+  --hover-width: 75%;
+  --other-width: 25%;
+  --speed: 1000ms;
 }
-body {
-  margin:0;
+
+html, body {
+  margin: 0;
   padding: 0;
+  width: 100%;
   height: 100%;
 }
 
@@ -22,13 +30,32 @@ section {
   height: 100%;
 }
 
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /* Menu Section */
 .navbar-brand {
   font-family: Neou-Thin;
 }
-.nav-item {
-  font-family: Neou-Bold;
 
+.nav-item {
+  text-align: right;
+  font-family: Neou-Bold;
+  font-size: 1.3rem;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 /* First Section */
@@ -38,21 +65,20 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url('../img/front-image.jpg');
-  background-size: cover;
 }
-.first-page-title h1 {
-  font-size: 7em;
+
+.large-page-title h1 {
+  font-size: 7rem;
   font-family: Neou-Thin;
   font-weight: 100;
 }
-.first-page-title h2 {
-  font-size: 5em;
+
+.large-page-title h2 {
+  font-size: 5rem;
   font-family: Neou-Bold;
 }
 
 /* About Section */
-
 .about-section {
   display: flex;
   flex-direction: column;
@@ -70,14 +96,15 @@ section {
 
 .about-section-left {
   font-family: Neou-Thin;
-  font-size: 2.5em;
+  font-size: 2.5rem;
 }
+
 .about-section-right {
   font-family: Neou-Bold;
 }
 
 /* Project Section */
-.project-section{
+.project-section {
   height: auto;
 }
 
@@ -89,11 +116,11 @@ section {
 .project-section h1 {
   font-family: Neou-Thin;
   text-align: center;
-  font-size: 4em;
+  font-size: 4rem;
 }
 
 .project-section i {
-  font-size: 2.5em;
+  font-size: 2.5rem;
   position: relative;
   top: 8px;
   right: 20px;
@@ -110,15 +137,16 @@ section {
   background-size: contain;
   width: auto;
   height: 500px;
-
 }
 
 .project-one {
   background-image: url('../img/projekt-image1.png');
 }
+
 .project-two {
   background-image: url('../img/projekt-image1.png');
 }
+
 .project-three {
   background-image: url('../img/projekt-image1.png');
 }
@@ -126,4 +154,275 @@ section {
 .project-section-github {
   display: flex;
   justify-content: center;
+}
+
+/* Work Section */
+.work-section .large-page-title {
+  text-align: right;
+}
+
+.work-section .large-page-title h2 {
+  font-size: 3rem;
+}
+
+.work-section .row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.work-box .title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.work-box .title{
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.content {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.content .content-overlay {
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay{
+  opacity: 1;
+}
+
+.content-image{
+  width: 100%;
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.content-details h3{
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.content-details p{
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.fadeIn-top{
+  top: 20%;
+}
+
+/* Split Section */
+.split-container {
+  position: relative;
+  width: 100%;
+  height: 70%;
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.split h1 {
+  font-family: Neou-Thin;
+  font-size: 5rem;
+  position: relative;
+  top: 20%;
+  left: 72%;
+  transform: translateX(-47%);
+  white-space: nowrap;
+}
+
+.split p {
+  position: relative;
+  top: 20%;
+  font-family: Neou-Bold;
+  font-size: 1.3rem;
+  text-align: left;
+  width: 700px;
+  transform: translateX(-70%);
+  margin-left: 65%;
+  overflow: hidden;
+}
+
+.split.left {
+  left: 0%;
+  background: url('../img/split-image2.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.split.left::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(43, 43, 43, 0.7);
+}
+
+.split.right::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(43, 43, 43, 0.7);
+}
+
+.split.right {
+  right: 0;
+  background: url('../img/split-image1.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.split.left, .split.right {
+  transition: 1s all ease-in-out;
+}
+
+.hover-left .left {
+  width: 65%;
+}
+
+.hover-left .right {
+  width: 35%;
+}
+
+.hover-left .right:before {
+  z-index: 2;
+}
+
+.hover-right .right {
+  width: 65%;
+}
+
+.hover-right .left {
+  width: 35%;
+}
+
+.hover-right .left:before {
+  z-index: 2;
+}
+
+/* Prallax Section */
+.pimg1 {
+  position: relative;
+  opacity: 0.70;
+  background-image: url('../img/parallax-image.jpg');
+  height: 40%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.ptext {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.ptext .border {
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+}
+
+.ptext .border.trans {
+  background-color: transparent;
+}
+
+/* Contact Section */
+.contact-section h2 {
+  font-family: Neou-Thin;
+  font-size: 5rem;
+  text-align: center;
+}
+
+.contact-section p {
+  font-family: Neou-Bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.form {
+  font-family: Neou-Bold;
+  width: 100%;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-around;
+  height: 100px;
+  align-items: center;
+  margin: 0;
+}
+
+.copyright {
+  font-family: Neou-Bold;
+  font-size: 1.2rem;
+}
+
+.copyright p {
+  margin: 0;
+}
+
+.social-icon {
+  display: flex;
+  font-size: 2.5rem;
+  justify-content: space-around;
+}
+
+.social-icon i {
+  color: #6c757d;
+}
+
+.social-icon i:hover {
+  color: #343a40;
+  transition: 0.3s ease-in;
 }
