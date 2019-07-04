@@ -157,6 +157,10 @@ section {
 }
 
 /* Work Section */
+.work-section {
+  height: auto;
+}
+
 .work-section .large-page-title {
   text-align: right;
 }
@@ -168,22 +172,17 @@ section {
 .work-section .row {
   display: flex;
   justify-content: space-around;
+  font-family: Neou-Bold;
 }
 
-.work-box .title {
-  text-align: center;
-  margin-bottom: 10px;
-}
 .work-box .title{
-  color: #1a1a1a;
   text-align: center;
-  margin-bottom: 10px;
 }
 
 .content {
   position: relative;
-  width: 90%;
-  max-width: 400px;
+  width: 100%;
+  max-width: 600px;
   margin: auto;
   overflow: hidden;
 }
@@ -225,7 +224,7 @@ section {
   transform: translate(-50%, -50%);
   -webkit-transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
 }
 
 .content:hover .content-details{
