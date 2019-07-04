@@ -1,3 +1,18 @@
+// Navbar
+$.get("navbar.html", function(data) {
+  $("#nav-placeholder").replaceWith(data);
+});
+
+// Navbar
+$.get("footer.html", function(data) {
+  $("#footer-placeholder").replaceWith(data);
+});
+
+
+
+
+// Split Part
+
 const left = document.querySelector('.left');
 const right = document.querySelector('.right');
 const container = document.querySelector('.split-container');
