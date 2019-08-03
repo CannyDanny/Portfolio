@@ -94,7 +94,7 @@ section {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.about-section-left {
+.about-section-left p {
   font-family: Neou-Thin;
   font-size: 2.5rem;
 }
@@ -105,6 +105,8 @@ section {
 
 /* Project Section */
 .project-section {
+  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -234,7 +236,7 @@ section {
 }
 
 .content-details h3{
-  color: #fff;
+  color: #ffc935;
   font-weight: 500;
   letter-spacing: 0.15em;
   margin-bottom: 0.5em;
@@ -380,6 +382,7 @@ section {
   font-family: Neou-Thin;
   font-size: 5rem;
   text-align: center;
+  
 }
 
 .contact-section p {
@@ -393,6 +396,10 @@ section {
   width: 100%;
 }
 
+.form label {
+  color: #ffc935;
+}
+
 /* Footer */
 footer {
   display: flex;
@@ -400,15 +407,14 @@ footer {
   height: 100px;
   align-items: center;
   margin: 0;
-}
-
-.copyright {
-  font-family: Neou-Bold;
-  font-size: 1.2rem;
+  background-color: #ffc935;
 }
 
 .copyright p {
   margin: 0;
+  font-family: Neou-Bold;
+  font-size: 1.2rem;
+  color: #fff;
 }
 
 .social-icon {
@@ -418,10 +424,10 @@ footer {
 }
 
 .social-icon i {
-  color: #6c757d;
+  color: #fff;
 }
 
 .social-icon i:hover {
-  color: #343a40;
+  color: #38383a;
   transition: 0.3s ease-in;
 }
