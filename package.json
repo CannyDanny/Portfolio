@@ -4,13 +4,18 @@
   "description": "Denis Plzak Portfolio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
   },
   "author": "Denis Plzak",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^9.6.1",
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-postcss": "^8.0.0",
-    "sass": "^1.22.5"
+    "sass": "^1.22.9"
+  },
+  "dependencies": {
+    "npx": "^9.7.1"
   }
 }

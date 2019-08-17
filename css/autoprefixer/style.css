@@ -1,0 +1,477 @@
+@font-face {
+  font-family: Neou-Thin;
+  src: url('font/Neou-Thin.ttf');
+}
+
+@font-face {
+  font-family: Neou-Bold;
+  src: url('font/Neou-Bold.ttf');
+}
+
+/* Default Styling */
+:root {
+  --container-bg-color: #333;
+  --left-bg-color: rgba(223, 39, 39, 0.7);
+  --right-bg-color: rgba(43, 43, 43, 0.8);
+  --hover-width: 75%;
+  --other-width: 25%;
+  --speed: 1000ms;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Menu Section */
+.navbar-brand {
+  font-family: Neou-Thin;
+  color: #ffc935!important;
+}
+
+.navbar-nav {
+  display: -webkit-box!important;
+  display: -ms-flexbox!important;
+  display: flex!important;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.nav-item {
+  text-align: right;
+  font-family: Neou-Bold;
+  font-size: 1.3rem;
+  padding-left: 60px;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.nav-link:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  right: 0%;
+  position: absolute;
+  background: #ffc935;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.nav-link:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+/* First Section */
+.first-section {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.large-page-title h1 {
+  font-size: 7rem;
+  font-family: Neou-Bold;
+  font-weight: 100;
+}
+
+.large-page-title h2 {
+  font-size: 5rem;
+  font-family: Neou-Thin;
+}
+
+.large-page-title span {
+  color: #ffc935;
+}
+
+/* About Section */
+
+.about-section {
+  height: auto;
+}
+
+.title {
+  width: 60%;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #38383a;
+  z-index: 1;
+}
+
+.title h1 {
+  font-family: Neou-Thin;
+  color: #fff;
+  font-size: 5rem;
+  margin: 0;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.about-row {
+  padding: 0 5%;
+  height: auto;
+
+}
+
+.about-section-left p {
+  font-family: Neou-Bold;
+  text-align: justify;
+  line-height: 35px;
+  padding: 30px 0px;
+  height: auto;
+}
+
+.about-section-right {
+  background-image: url('../img/about-image.jpg');
+  background-size: cover;
+  -webkit-transform: translateY(-50px);
+  transform: translateY(-50px);
+  z-index: -1;
+  height: auto;
+}
+
+/*  About-Work   */
+
+.about-work {
+  height: auto;
+  min-height: 600px;
+  text-align: center;
+}
+
+.responsive-box {
+  background-image: url('../img/responsive.png');
+}
+
+.browser-box {
+  background-image: url('../img/windows.png');
+}
+
+.testing-box {
+  background-image: url('../img/check-square.png');
+}
+
+.icon-box {
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  margin: 0px 80px;
+  height: 120px;
+}
+
+/* Work Section */
+.work-section {
+  height: auto;
+}
+
+.subtitle {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  font-family: Neou-Thin;
+  margin-top: 5%;
+}
+
+.subtitle h3 {
+  text-align: right;
+  line-height: 40px;
+}
+
+.subtitle::after {
+  content: "";
+  height: 5px;
+  width: 15%;
+  background-color: #ffc935;
+  position: absolute;
+  bottom: 0;
+  right: 2%;
+}
+
+.work-box {
+  margin: 5% 0%;
+}
+
+.work-box h3 {
+  font-family: Neou-bold;
+  font-size: 3rem;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.content .content-overlay {
+  background: rgba(56, 56, 58, 0.85);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay{
+  opacity: 1;
+}
+
+.content-image{
+  width: 100%;
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.content:hover .content-details{
+  top: 50%;
+  right: 50%;
+  opacity: 1;
+}
+
+.content-details h3{
+  color: #fff;
+  border-bottom: 1px solid #ffc935;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.content-details p{
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: left;
+  font-family: Neou-Thin;
+  line-height: 35px;
+}
+
+.fadeIn-top{
+  top: 20%;
+}
+
+/*  Vision Section */
+
+.vision {
+  height: 700px;
+}
+
+.vision h1 {
+ font-family: Neou-Thin;
+}
+
+.vision p {
+  font-family: Neou-Bold;
+}
+
+.vision-left, .vision-right {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.vision-right {
+  background-color: #ffc935;
+  color: #fff;
+  border-left: 100px solid #fff;
+  border-bottom: 700px solid transparent;
+}
+
+.vision-right h1, .vision-right p {
+  -webkit-transform: translateY(340px);
+  transform: translateY(340px);
+}
+
+/* Prallax Section */
+.pimg1 {
+  position: relative;
+  opacity: 0.70;
+  background-image: url('../img/parallax-image.jpg');
+  height: 70%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.ptext {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.ptext .border {
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+}
+
+.ptext .border.trans {
+  background-color: transparent;
+}
+
+/* Contact Section */
+
+.contact-section h2 {
+  font-family: Neou-Thin;
+  font-size: 5rem;
+}
+
+.contact-section p {
+  font-family: Neou-Bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.form {
+  font-family: Neou-Bold;
+  width: 100%;
+}
+
+
+
+/* Footer */
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  height: 100px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  background-color: #ffc935;
+}
+
+.copyright p {
+  margin: 0;
+  font-family: Neou-Bold;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.social-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2.5rem;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.social-icon i {
+  color: #fff;
+}
+
+.social-icon i:hover {
+  color: #38383a;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .nav-link {
+    margin-left: 80%;
+  }
+}

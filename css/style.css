@@ -44,10 +44,17 @@ section {
   color: #ffc935!important;
 }
 
+.navbar-nav {
+  display: flex!important;
+  justify-content: center;
+  width: 100%;
+}
+
 .nav-item {
   text-align: right;
   font-family: Neou-Bold;
   font-size: 1.3rem;
+  padding-left: 60px;
 }
 
 .navbar-toggler {
@@ -57,6 +64,30 @@ section {
 .navbar-toggler:focus {
   outline: none;
   box-shadow: none;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.nav-link:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  right: 0%;
+  position: absolute;
+  background: #ffc935;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.nav-link:hover:after { 
+  width: 100%; 
+  left: 0; 
 }
 
 /* First Section */
@@ -84,19 +115,28 @@ section {
 }
 
 /* About Section */
-.about-section {
 
+.about-section {
+  height: auto;
+}
+
+.title {
+  width: 60%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #38383a;
+  z-index: 1;
 }
 
 .title h1 {
-  width: 60%;
-  height: 135px;
-  padding: 3% 6%;
-  background-color: #38383a;
-  font-family: Neou-Bold;
+  font-family: Neou-Thin;
   color: #fff;
   font-size: 5rem;
-  z-index: 1;
+  margin: 0;
+  height: auto;
 }
 
 .overlay {
@@ -106,10 +146,18 @@ section {
   background: rgba(0, 0, 0, 0.5);
 }
 
+.about-row {
+  padding: 0 5%;
+  height: auto;
+
+}
+
 .about-section-left p {
   font-family: Neou-Bold;
+  text-align: justify;
   line-height: 35px;
   padding: 30px 0px;
+  height: auto;
 }
 
 .about-section-right {
@@ -117,6 +165,35 @@ section {
   background-size: cover;
   transform: translateY(-50px);
   z-index: -1;
+  height: auto;
+}
+
+/*  About-Work   */
+
+.about-work {
+  height: auto;
+  min-height: 600px;
+  text-align: center;
+}
+
+.responsive-box {
+  background-image: url('../img/responsive.png');
+}
+
+.browser-box {
+  background-image: url('../img/windows.png');
+}
+
+.testing-box {
+  background-image: url('../img/check-square.png');
+}
+
+.icon-box {
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  margin: 0px 80px;
+  height: 120px;
 }
 
 /* Work Section */
@@ -124,33 +201,36 @@ section {
   height: auto;
 }
 
-.work-title {
-  display: flex;
-  justify-content: flex-end;
-  transform: translateY(-100px);
-}
-
-.work-subtitle {
+.subtitle {
   position: relative;
   display: flex;
   justify-content: flex-end;
   font-family: Neou-Thin;
+  margin-top: 5%;
 }
 
-.work-subtitle h3 {
+.subtitle h3 {
   text-align: right;
   line-height: 40px;
 }
 
-.work-subtitle::after {
+.subtitle::after {
   content: "";
   height: 5px;
-  width: 10%;
+  width: 15%;
   background-color: #ffc935;
   position: absolute;
   bottom: 0;
   right: 2%;
-  
+}
+
+.work-box {
+  margin: 5% 0%;
+}
+
+.work-box h3 {
+  font-family: Neou-bold;
+  font-size: 3rem;
 }
 
 .content {
@@ -161,7 +241,7 @@ section {
 }
 
 .content .content-overlay {
-  background: rgba(0,0,0,0.7);
+  background: rgba(56, 56, 58, 0.85);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -188,7 +268,7 @@ section {
   text-align: center;
   padding-left: 1em;
   padding-right: 1em;
-  width: 100%;
+  width: 80%;
   top: 50%;
   left: 50%;
   opacity: 0;
@@ -202,12 +282,13 @@ section {
 
 .content:hover .content-details{
   top: 50%;
-  left: 50%;
+  right: 50%;
   opacity: 1;
 }
 
 .content-details h3{
-  color: #ffc935;
+  color: #fff;
+  border-bottom: 1px solid #ffc935;
   font-weight: 500;
   letter-spacing: 0.15em;
   margin-bottom: 0.5em;
@@ -216,11 +297,49 @@ section {
 
 .content-details p{
   color: #fff;
-  font-size: 0.8em;
+  font-size: 1.2rem;
+  text-align: left;
+  font-family: Neou-Thin;
+  line-height: 35px;
 }
 
 .fadeIn-top{
   top: 20%;
+}
+
+/*  Vision Section */
+
+.vision {
+  height: 700px;
+}
+
+.vision h1 {
+ font-family: Neou-Thin;
+}
+
+.vision p {
+  font-family: Neou-Bold;
+}
+
+.vision-left, .vision-right {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.vision-right {
+  background-color: #ffc935;
+  color: #fff;
+  border-left: 100px solid #fff;
+  border-bottom: 700px solid transparent;
+}
+
+.vision-right h1, .vision-right p {
+  transform: translateY(340px);
 }
 
 /* Prallax Section */
@@ -257,11 +376,10 @@ section {
 }
 
 /* Contact Section */
+
 .contact-section h2 {
   font-family: Neou-Thin;
   font-size: 5rem;
-  text-align: center;
-  
 }
 
 .contact-section p {
@@ -307,4 +425,11 @@ footer {
 .social-icon i:hover {
   color: #38383a;
   transition: 0.3s ease-in;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .nav-link {
+    margin-left: 80%;
+  }
 }
