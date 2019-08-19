@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Bellefair|Catamaran:300|Heebo:100|Kanit:300|Martel+Sans:300&display=swap');
-
 @font-face {
-  font-family: heebo-thin;
+  font-family: Heebo-Thin;
+  src: url('font/Heebo-Thin.ttf');
 }
 
 @font-face {
-  font-family: heebo-regular;
+  font-family: Neou-Bold;
+  src: url('font/Heebo-Regular.ttf');
 }
 
 /* Default Styling */
@@ -54,7 +54,7 @@ section {
 
 
 .navbar-brand {
-   font-family: 'Heebo', sans-serif;
+  font-family: Heebo-Thin;
   color: #ffc935!important;
 }
 
@@ -67,7 +67,7 @@ section {
 
 .nav-item {
   text-align: right;
-  font-family: 'Heebo', sans-serif;
+  font-family: Heebo-Thin;
   font-size: 1.3rem;
   padding-left: 60px;
 }
@@ -116,15 +116,13 @@ section {
 
 .large-page-title h1 {
   font-size: 7rem;
-  font-family: 'Heebo', sans-serif;
+  font-family: Heebo-Thin;
   font-weight: 100;
 }
 
 .large-page-title h2 {
   font-size: 5rem;
-  font-family: 'Heebo', sans-serif;
-  font-weight: 100;
-
+  font-family: Heebo-Thin;
 }
 
 .large-page-title span {
@@ -148,7 +146,7 @@ section {
 }
 
 .title h1 {
-  font-family: 'Heebo', sans-serif;
+  font-family: Heebo-Thin;
   color: #fff;
   font-size: 5rem;
   margin: 0;
@@ -171,7 +169,7 @@ section {
 }
 
 .about-section-left p {
-  font-family: heebo-regular;
+  font-family: Neou-Bold;
   text-align: justify;
   line-height: 35px;
   padding: 30px 0px;
@@ -200,15 +198,6 @@ section {
 .about-work .container .row {
   display: flex;
   align-items: center;
-}
-
-.about-work h2 {
-  font-family: 'Heebo', sans-serif;
-  padding: 25px 0 10px 0px;
-}
-
-.about-work p {
-  font-family: heebo-regular;
 }
 
 .responsive-box {
@@ -240,7 +229,7 @@ section {
   position: relative;
   display: flex;
   justify-content: flex-end;
-  font-family: 'Heebo', sans-serif;
+  font-family: Heebo-Thin;
   margin-top: 5%;
 }
 
@@ -256,7 +245,7 @@ section {
   background-color: #ffc935;
   position: absolute;
   bottom: 0;
-  right: 0%;
+  right: 2%;
 }
 
 .work-box {
@@ -264,9 +253,8 @@ section {
 }
 
 .work-box h3 {
-  font-family: 'Heebo', sans-serif;
+  font-family: Neou-bold;
   font-size: 3rem;
-  
 }
 
 .content {
@@ -335,7 +323,7 @@ section {
   color: #fff;
   font-size: 1.2rem;
   text-align: left;
-  font-family: 'Heebo', sans-serif;
+  font-family: Heebo-Thin;
   line-height: 35px;
 }
 
@@ -350,11 +338,11 @@ section {
 }
 
 .vision h1 {
-  font-family: 'Heebo', sans-serif;
+ font-family: Heebo-Thin;
 }
 
 .vision p {
-  font-family: heebo-regular;
+  font-family: Neou-Bold;
 }
 
 .vision-left, .vision-right {
@@ -424,18 +412,18 @@ section {
 /* Contact Section */
 
 .contact-section h2 {
-  font-family: 'Heebo', sans-serif;
+  font-family: Heebo-Thin;
   font-size: 5rem;
 }
 
 .contact-section p {
-  font-family: heebo-regular;
+  font-family: Neou-Bold;
   font-size: 2rem;
   text-align: center;
 }
 
 .form {
-  font-family: heebo-regular;
+  font-family: Neou-Bold;
   width: 100%;
 }
 
@@ -446,11 +434,12 @@ footer {
   height: 100px;
   align-items: center;
   margin: 0;
+  background-color: #ffc935;
 }
 
 .copyright p {
   margin: 0;
-  font-family: heebo-thin;
+  font-family: Neou-Bold;
   font-size: 1.2rem;
   color: #fff;
 }
@@ -488,55 +477,20 @@ footer {
     height: 80px;
   }
   .title h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     width: 100%;
   }
-
-  /* Footer  */
-  
   .copyright p {
     font-size: 5px;
   }
   .social-icon {
     font-size: 1.5rem;
   }
-  
-  /* Work */
-
-  .work-box h3 {
-    font-size: 1.5rem;
-  }
-
-  .subtitle h3{
-    font-size: 0.9rem;
-    line-height: 20px;
-  }
-
-
-  .content-details h3{
-    font-size: 1rem;
-    line-height: 20px;
-  }
-
-  .content-details p{
-  color: #fff;
-  font-size: 0.4rem;
-  line-height: 15px;
-}
-
-  /* Vision */
-
-  .vision-left, .vision-right {
-    height: auto;
-    padding: 20px 0px;
-    text-align: left;
-  }
 
 }
 
 
 @media only screen and (max-width: 768px) {
-
   /* Navbar */
 
   .navbar-nav {
@@ -546,34 +500,19 @@ footer {
   li.nav-item {
     padding: 0;
   }
+  /* .nav-link {
+    margin-left: 80%;
+  } */
+  
 
-  /* About */
   .about-section-right {
     width: 100%;
     min-height: 400px;
     height: auto;
   }
   
-  /* Footer */
   .copyright p {
     font-size: 1rem;
-  }
-
-  /*  Work  */
-
-  .content-details h3{
-    font-size: 2rem;
-    text-transform: uppercase;
-  }
-
-  .content-details p{
-  color: #fff;
-  font-size: 1rem;
-  line-height: 25px;
-  }
-
-  .work-buttons {
-    margin: 0 30%:
   }
 
 }
