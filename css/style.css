@@ -1,11 +1,11 @@
 @font-face {
-  font-family: Neou-Thin;
-  src: url('font/Neou-Thin.ttf');
+  font-family: Heebo-Thin;
+  src: url('font/Heebo-Thin.ttf');
 }
 
 @font-face {
   font-family: Neou-Bold;
-  src: url('font/Neou-Bold.ttf');
+  src: url('font/Heebo-Regular.ttf');
 }
 
 /* Default Styling */
@@ -23,10 +23,12 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
+
 }
 
 html {
   scroll-behavior: smooth;
+
 }
 
 section {
@@ -52,7 +54,7 @@ section {
 
 
 .navbar-brand {
-  font-family: Neou-Thin;
+  font-family: Heebo-Thin;
   color: #ffc935!important;
 }
 
@@ -65,7 +67,7 @@ section {
 
 .nav-item {
   text-align: right;
-  font-family: Neou-Bold;
+  font-family: Heebo-Thin;
   font-size: 1.3rem;
   padding-left: 60px;
 }
@@ -114,13 +116,13 @@ section {
 
 .large-page-title h1 {
   font-size: 7rem;
-  font-family: Neou-Bold;
+  font-family: Heebo-Thin;
   font-weight: 100;
 }
 
 .large-page-title h2 {
   font-size: 5rem;
-  font-family: Neou-Thin;
+  font-family: Heebo-Thin;
 }
 
 .large-page-title span {
@@ -144,7 +146,7 @@ section {
 }
 
 .title h1 {
-  font-family: Neou-Thin;
+  font-family: Heebo-Thin;
   color: #fff;
   font-size: 5rem;
   margin: 0;
@@ -222,7 +224,7 @@ section {
   position: relative;
   display: flex;
   justify-content: flex-end;
-  font-family: Neou-Thin;
+  font-family: Heebo-Thin;
   margin-top: 5%;
 }
 
@@ -316,7 +318,7 @@ section {
   color: #fff;
   font-size: 1.2rem;
   text-align: left;
-  font-family: Neou-Thin;
+  font-family: Heebo-Thin;
   line-height: 35px;
 }
 
@@ -331,7 +333,7 @@ section {
 }
 
 .vision h1 {
- font-family: Neou-Thin;
+ font-family: Heebo-Thin;
 }
 
 .vision p {
@@ -348,9 +350,25 @@ section {
 }
 
 .vision-right {
+  position: relative;
   background-color: #ffc935;
   color: #fff;
+}
 
+.vision-right:after {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #ffc935;
+  transform-origin: top right;
+  -ms-transform: skew(-10deg, 0deg);
+  -webkit-transform: skew(-10deg, 0deg);
+  transform: skew(-10deg, 0deg);
 }
 
 /* Prallax Section */
@@ -389,7 +407,7 @@ section {
 /* Contact Section */
 
 .contact-section h2 {
-  font-family: Neou-Thin;
+  font-family: Heebo-Thin;
   font-size: 5rem;
 }
 
